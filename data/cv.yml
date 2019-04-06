@@ -1,0 +1,98 @@
+personal:
+  name: "Aaron Gorka"
+  url: https://aarongorka.com
+  summary: "I am a specialist in cloud-native, CI/CD and DevOps transformation. I am experienced in solutions architecture and consulting for cloud projects. I'm self-driven and highly motivated. I enjoy keeping on the forefront of technology developments."
+  profiles:
+    - url: https://linkedin/in/aarongorka
+    - url: https://github.com/aarongorka
+skills:
+  - name: Cloud
+    proficiency: "Expert in AWS; CloudFormation, EC2, S3, Networking, RDS."
+    keywords: ["CloudFormation", "EC2", "S3", "Networking", "RDS"]
+  - name: Continous Delivery
+    keywords: ["GoCD", "Jenkins", "Gitlab"]
+    proficiency: "Expert in designing & building CI/CD platforms and pipelines."
+  - name: Docker & Serverless
+    keywords: ["Kubernetes", "ECS", "Nomad", "Rancher", "Lambda"]
+    proficiency: "Expert in designing & building Docker orchestration platforms (ECS, Kubernetes, Nomad, Rancher). Strong skills in Serverless (AWS Lambda)."
+  - name: "Development"
+    keywords: ["Python", "Javascript", "Java", "Golang"]
+    description: "Strong skills in Python. Working knowledge of most languages; Javascript, Ruby, Java, Golang."
+  - name: "Linux"
+    keywords: ["Redhat", "CentOS", "Debian", "Ubuntu", "Fedora"]
+    proficiency: "Strong Linux skills; Redhat, CentOS, Debian, Ubuntu, Fedora."
+work:
+  - startDate: Aug 2018
+    endDate: present
+    name: CMD Solutions
+    position: Senior Consultant
+    summary: |
+      * Cloud-native application & cultural transformation
+      * Uplifting development teams in CI/CD
+      * Presented to on cloud-native & CI/CD best practices
+      * Implemented enterprise-grade Kubernetes platform in AWS
+  - startDate: Aug 2017
+    endDate: Aug 2018
+    name: amaysim
+    position: Senior DevOps Engineer
+    summary: |
+        * Championed DevOps culture in development teams
+        * Modernised legacy development practices: introduced containerisation, [pipeline-based CI/CD workflows](https://amaysim.engineering/auto-scaling-build-agents-for-gocdtags-a10f12d5b77c), trunk-based development, immutable artifacts
+        * Designed and built an [application platform based on ECS](https://aarongorka.com/blog/ecs-autoscaling-tips/)
+        * Developed and contributed to Free Open Source project"
+  - startDate: Feb 2017
+    endDate: Jul 2017
+    name: Domain Group
+    position: DevOps Engineer
+    summary: |
+      * Building infrastructure for services in AWS environment
+      * Building CI/CD pipelines
+      * Maintenance and reliability engineering for high-traffic websites including https://domain.com.au
+      * Designed and built monitoring platform, [highly useful](http://tech.domain.com.au/2017/05/detecting-memory-issues-with-dotnet-core-applications/) for development teams
+      * Delivered solution architecture for rewrite of https://www.mydesktop.com.au
+  - startDate: 2015
+    endDate: 2017
+    name: TAL
+    position: System Monitoring Specialist
+    summary: |
+      * Administrated Linux servers and applications
+      * Collaborated with developers, DBAs, application support and infrastructure support to deliver accurate metrics to management
+  - startDate: 2013
+    endDate: 2015
+    name: KU Children's Services
+    position: Level 2/3 Support Technician
+    summary: |
+      Providing support on everything IT-related to ensure business continuity.
+certificate:
+  - grantDate: 2019
+    name: AWS Certified Advanced Networking - Specality
+    website: Amazon Web Services
+  - grantDate: 2019
+    name: AWS Certified Big Data - Speciality
+    website: Amazon Web Services
+  - grantDate: 2019
+    name: AWS Certified Cloud Practitioner
+    website: Amazon Web Services
+  - grantDate: 2018
+    name: AWS Certified Security - Speciality
+    website: Amazon Web Services
+  - grantDate: 2017
+    name: AWS Certified DevOps Engineer - Professional
+    website: Amazon Web Services
+  - grantDate: 2017
+    name: AWS Certified Solutions Architect - Professional
+    website: Amazon Web Services
+  - grantDate: 2017
+    name: AWS Certified SysOps Administrator - Associate
+    website: Amazon Web Services
+  - grantDate: 2017
+    name: AWS Certified Developer - Associate
+    website: Amazon Web Services
+  - grantDate: 2016
+    name: AWS Certified Solutions Architect - Associate
+    website: Amazon Web Services
+  - grantDate: 2015
+    name: Red Hat Certified System Administrator
+    website: Red Hat,Inc.
+interests:
+  - name: "I have an interest in hobby electronics, cycling and most things tech related. My favourite music genre at the moment is progressive metal."

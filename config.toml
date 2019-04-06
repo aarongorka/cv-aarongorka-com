@@ -1,0 +1,4 @@
+baseURL = "http://cv.aarongorka.com"
+languageCode = "en-us"
+title = "Aaron Gorka's CV"
+theme = "hugo-friggeri-cv"
