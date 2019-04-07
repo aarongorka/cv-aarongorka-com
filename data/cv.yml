@@ -7,20 +7,15 @@ personal:
     - url: https://github.com/aarongorka
 skills:
   - name: Cloud
-    proficiency: "Expert in AWS; CloudFormation, EC2, S3, Networking, RDS."
     keywords: ["CloudFormation", "Terraform", "Solution Architecture"]
   - name: Continous Delivery
     keywords: ["Jenkins", "GoCD", "Gitlab", "CircleCI"]
-    proficiency: "Expert in designing & building CI/CD platforms and pipelines."
   - name: Docker & Serverless
     keywords: ["Kubernetes", "EKS", "ECS", "Lambda"]
-    proficiency: "Expert in designing & building Docker orchestration platforms (ECS, Kubernetes, Nomad, Rancher). Strong skills in Serverless (AWS Lambda)."
   - name: "Development"
-    keywords: ["Python", "Javascript", "Java", "Golang"]
-    description: "Strong skills in Python. Working knowledge of most languages; Javascript, Ruby, Java, Golang."
+    keywords: ["Python", "Javascript", "Ruby", "Java"]
   - name: "Linux"
     keywords: ["Redhat", "CentOS", "Debian", "Ubuntu", "Fedora"]
-    proficiency: "Strong Linux skills; Redhat, CentOS, Debian, Ubuntu, Fedora."
 work:
   - startDate: Aug 2018
     endDate: present
