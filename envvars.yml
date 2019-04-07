@@ -1,0 +1,44 @@
+envvars:
+  - name: AWS_ACCESS_KEY_ID
+    desc: AWS access key
+    tags:
+      - aws
+  - name: AWS_SECRET_ACCESS_KEY
+    desc: AWS secret key
+    tags:
+      - aws
+  - name: AWS_SESSION_TOKEN
+    desc: Assume role variable
+    optional: true
+    tags:
+      - aws
+  - name: AWS_DEFAULT_REGION
+    desc: AWS region
+    tags:
+      - aws
+  - name: DOMAIN_NAME
+    desc: Domain name
+    tags:
+      - cfn
+      - sync
+  - name: AWS_CLOUDFORMATION_STACK_NAME
+    desc: CloudFormation stack to be created
+    tags:
+      - invalidate
+  - name: CERTIFICATE_ARN
+    desc: Certificate to be used on CloudFront
+    tags:
+      - cfn
+  - name: OAI_ID
+    desc: Origin Access Identity ID
+    tags:
+      - cfn
+tags:
+  - name: aws
+    desc: AWS authentication
+  - name: cfn
+    desc: CloudFormation parameters
+  - name: invalidate
+    desc: Invalidation stage
+  - name: sync
+    desc: S3 sync stage

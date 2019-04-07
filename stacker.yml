@@ -1,0 +1,12 @@
+namespace: ""
+namespace_delimiter: ""
+stacks:
+  - name: cv-aarongorka-com
+    template_path: cloudformation.yml
+    region: us-east-1
+    variables:
+      DomainName: cv.aarongorka.com
+      HostedZone: aarongorka.com
+      CertificateArn: ${envvar CERTIFICATE_ARN}
+      OaiId: ${envvar OAI_ID}
+

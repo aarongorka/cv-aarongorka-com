@@ -1,4 +1,6 @@
-baseURL = "http://cv.aarongorka.com"
+baseURL = "https://cv.aarongorka.com"
 languageCode = "en-us"
 title = "Aaron Gorka's CV"
 theme = "hugo-friggeri-cv"
+enableEmoji = true
+enableRobotsTXT = true

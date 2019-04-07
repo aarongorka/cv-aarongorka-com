@@ -1,0 +1,53 @@
+image: aarongorka/musketeers:latest  # Docker client, zeus, docker-compose, etc.
+services:
+  - docker:dind  # sidecar that actually runs the Docker daemon
+
+variables:
+  DOCKER_HOST: "tcp://docker:2375"  # this enables the musketeers image to communicate with the dind container
+  DOMAIN_NAME: "cv.aarongorka.com"
+  AWS_DEFAULT_REGION: "us-east-1"
+  AWS_CLOUDFORMATION_STACK_NAME: "cv-aarongorka-com"
+
+stages:
+  - build
+  - deploy
+  - sync
+  - invalidate
+
+build:
+  stage: build
+  script:
+    - zeus build
+  variables:
+    GIT_SUBMODULE_STRATEGY: recursive
+  artifacts:
+    paths:
+      - public/
+    expire_in: 1 week
+
+deploy:
+  stage: deploy
+  environment: 
+    name: production
+  script:
+    - zeus deploy
+  only:
+    - master
+
+sync:
+  stage: sync
+  environment: 
+    name: production
+  script:
+    - zeus syncToS3
+  only:
+    - master
+
+invalidate:
+  stage: invalidate
+  environment: 
+    name: production
+  script:
+    - zeus cacheInvalidation
+  only:
+    - master
