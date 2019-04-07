@@ -8,12 +8,12 @@ personal:
 skills:
   - name: Cloud
     proficiency: "Expert in AWS; CloudFormation, EC2, S3, Networking, RDS."
-    keywords: ["CloudFormation", "EC2", "S3", "Networking", "RDS"]
+    keywords: ["CloudFormation", "Terraform", "Solution Architecture"]
   - name: Continous Delivery
-    keywords: ["GoCD", "Jenkins", "Gitlab"]
+    keywords: ["Jenkins", "GoCD", "Gitlab", "CircleCI"]
     proficiency: "Expert in designing & building CI/CD platforms and pipelines."
   - name: Docker & Serverless
-    keywords: ["Kubernetes", "ECS", "Nomad", "Rancher", "Lambda"]
+    keywords: ["Kubernetes", "EKS", "ECS", "Lambda"]
     proficiency: "Expert in designing & building Docker orchestration platforms (ECS, Kubernetes, Nomad, Rancher). Strong skills in Serverless (AWS Lambda)."
   - name: "Development"
     keywords: ["Python", "Javascript", "Java", "Golang"]
