@@ -34,7 +34,7 @@ work:
         * Championed DevOps culture in development teams
         * Modernised legacy development practices: introduced containerisation, [pipeline-based CI/CD workflows](https://amaysim.engineering/auto-scaling-build-agents-for-gocdtags-a10f12d5b77c), trunk-based development, immutable artifacts
         * Designed and built an [application platform based on ECS](https://aarongorka.com/blog/ecs-autoscaling-tips/)
-        * Developed and contributed to Free Open Source project"
+        * Developed and contributed to Free Open Source projects
   - startDate: Feb 2017
     endDate: Jul 2017
     name: Domain Group
