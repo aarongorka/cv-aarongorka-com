@@ -44,3 +44,9 @@ services:
     working_dir: /srv/app
     volumes:
       - .:/srv/app:Z
+
+  pdf:
+    image: pink33n/html-to-pdf
+    volumes:
+      - .:/tmp/html-to-pdf:Z
+    command: "--url https://cv.aarongorka.com --pdf output.pdf"

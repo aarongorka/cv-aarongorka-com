@@ -42,6 +42,14 @@ commands:
     dependencies:
       - dotenv
 
+  pdf:
+    exec: docker-compose run --rm pdf
+    dependencies:
+      - dotenv
+
+  view:
+    exec: xdg-open output.pdf
+
   dotenv:
     exec: |
       touch .env
