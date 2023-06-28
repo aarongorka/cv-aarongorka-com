@@ -5,3 +5,7 @@ public/
 
 zeus/*
 !zeus/commands.yml
+
+*.pdf
+
+.hugo_build*

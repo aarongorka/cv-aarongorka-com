@@ -48,7 +48,7 @@ commands:
       - dotenv
 
   view:
-    exec: xdg-open output.pdf
+    exec: xdg-open output.pdf --url https://cv.aarongorka.com --pdf "Aaron Gorka.pdf"
 
   dotenv:
     exec: |
