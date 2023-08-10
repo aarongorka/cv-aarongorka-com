@@ -7,7 +7,7 @@ personal:
     - url: https://github.com/aarongorka
 skills:
   - name: Cloud
-    keywords: ["CloudFormation", "Terraform", "CDK", "Solution Architecture"]
+    keywords: ["AWS", "CloudFormation", "Terraform", "CDK", "Solution Architecture"]
   - name: Continous Delivery
     keywords: ["Github Actions", "Buildkite", "Gitlab", "Codefresh", "CircleCI"]
   - name: Docker & Serverless
