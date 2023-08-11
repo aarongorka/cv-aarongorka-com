@@ -47,8 +47,8 @@ commands:
     dependencies:
       - dotenv
 
-  view:
-    exec: xdg-open output.pdf --url https://cv.aarongorka.com --pdf "Aaron Gorka.pdf"
+  # view:
+  #   exec: xdg-open output.pdf --url https://cv.aarongorka.com --pdf "Aaron Gorka.pdf"
 
   dotenv:
     exec: |
