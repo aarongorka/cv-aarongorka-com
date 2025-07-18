@@ -3,30 +3,45 @@ personal:
   url: https://aarongorka.com
   summary: "Aaron is a specialist in cloud-native, CI/CD and DevOps transformation. He is experienced in solutions architecture and consulting for cloud projects. Aaron is self-driven and highly motivated."
   profiles:
-    - url: https://linkedin.com/in/aarongorka
     - url: https://github.com/aarongorka
+    - url: https://linkedin.com/in/aarongorka
 skills:
   - name: Cloud
-    keywords: ["AWS", "CloudFormation", "Terraform", "CDK", "Solution Architecture"]
+    keywords: ["AWS", "CloudFormation", "Terraform", "CDK", "Pulumi"]
   - name: Continous Delivery
     keywords: ["Github Actions", "Buildkite", "Gitlab", "Codefresh", "CircleCI"]
   - name: Docker & Serverless
-    keywords: ["Kubernetes", "EKS", "ECS", "Lambda"]
+    keywords: ["Kubernetes", "Docker", "EKS", "ECS", "Fargate", "Lambda"]
   - name: "Development"
-    keywords: ["Python", "Typescript", "Bash"]
+    keywords: ["Python", "Typescript (Javascript, Nodejs)", "Bash", "Testing"]
   - name: "Linux"
-    keywords: ["Redhat", "Debian", "Ubuntu", "Fedora"]
+    keywords: ["Networking", "Security", "System administration", "Automation"]
+  - name: "Soft skills"
+    keywords: ["Consulting", "Delivery", "Project management"]
 work:
+  - startDate: Feb 2024
+    endDate: August 2025
+    name: Nearmap
+    position: DevOps Lead
+    summary: |
+      Acting team lead for the core platform team. Major contributions include:
+
+        * Scaling Nearmap's EKS platform for 9,000 concurrent nodes for GPU workloads
+        * Optimising and uplifting Opentelemetry/Prometheus-based observability
+        * Uplift of CI/CD pipelines/practices
+        * Day-to-day team lead activities
   - startDate: Aug 2018
-    endDate: present
-    name: CMD Solutions
+    endDate: Feb 2024
+    name: CMD Solutions (Mantel Group)
     position: Lead Consultant
     summary: |
+      Lead consultant on client engagements. Notable projects include:
+
       #### Kasada
-        * Enabling web-scale for a rapidly expanding SaaS organisation
+        * Enabling "web-scale" for a rapidly expanding SaaS organisation
+        * Designed and delivered a logging platform with Fluentd on ECS Fargate and Elastic Cloud
         * Uplifting SDLC from multi-month to <1d release cycle
         * Designing and implementing Kasada's Kubernetes platform: see the [case study](https://www.cmdsolutions.com.au/case-studies/kasada-modernizes-for-faster-velocity-and-scaling-on-aws/) and [article from Amazon](https://aws.amazon.com/solutions/case-studies/kasada/)
-        * Typescript and Pulumi
 
       #### Vodafone Hutchison Australia (TPG)
         * AWS architect for https://www.vodafone.com.au website refresh
@@ -47,16 +62,14 @@ work:
     position: Senior DevOps Engineer
     summary: |
         * Championed DevOps culture in development teams
-        * Modernised legacy development practices: introduced containerisation, [pipeline-based CI/CD workflows](https://amaysim.engineering/auto-scaling-build-agents-for-gocdtags-a10f12d5b77c), trunk-based development, immutable artifacts
-        * Designed and built an [application platform based on ECS](https://aarongorka.com/blog/ecs-autoscaling-tips/)
-        * Developed and contributed to Free Open Source projects
+        * Migrated applications from Rancher to [AWS ECS](https://aarongorka.com/blog/ecs-autoscaling-tips/)
+        * Modernised legacy development practices: [pipeline-based CI/CD workflows](https://amaysim.engineering/auto-scaling-build-agents-for-gocdtags-a10f12d5b77c), trunk-based development, immutable artifacts
   - startDate: Feb 2017
     endDate: Jul 2017
     name: Domain Group
     position: DevOps Engineer
     summary: |
-      * Building infrastructure for services in AWS environment
-      * Building CI/CD pipelines
+      * Building AWS infrastructure and CI/CD pipelines
       * Maintenance and reliability engineering for high-traffic websites including https://domain.com.au
       * Designed and built monitoring platform, [highly useful](http://tech.domain.com.au/2017/05/detecting-memory-issues-with-dotnet-core-applications/) for development teams
       * Delivered solution architecture for rewrite of https://www.mydesktop.com.au
@@ -105,4 +118,4 @@ certificate:
     name: Red Hat Certified System Administrator
     website: Red Hat,Inc.
 interests:
-  - name: "In my free time I enjoy torturing myself with 6:30AM start bicycle group rides, or going on adrenaline-filled mountain bike rides with my friends. Afterwards, I like to tinker with electronics and technology."
+  - name: "In my free time I enjoy going on bicycle rides with my riding club or my friends. Afterwards, I like to tinker with electronics and technology."
