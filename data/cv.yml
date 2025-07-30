@@ -26,17 +26,17 @@ work:
     summary: |
       Acting team lead/principal for the core platform team.
 
-      Technologies used here include AWS, EKS, Terraform, Helm, GitLab, GitHub Actions, Prometheus and Loki.
+      Technologies used include AWS, EKS, Terraform, Helm, GitLab, GitHub Actions, Prometheus and Loki.
 
       #### EKS cluster scaling
 
-      Nearmap had been struggling with scaling their AI processing which ran on EKS. Initially, they faced issues at 2,500 nodes, including missing metric data and the EKS control plane timing out. Because of my experience with EKS and observability, I was brought in to resolve these issues.
+      When I started at Nearmap, they were facing issues with their 2,500 node EKS cluster. Because of my experience with EKS and observability, I was brought in to resolve these issues.
 
       After optimisation, we could run at least **9,000 GPU nodes**. A few of the (many) optimisations I put in:
 
         * A >10x reduction in timeseries metric data without any loss of actual monitoring capabilities. Prior to optimisation, the Amazon Managed Prometheus service would hit over 30 million series (the soft limit) with no sign of stopping. After optimisation, it did not exceed 10 million (even with several times more nodes and many more copmonents being monitored). This was achieved with analysis of metrics via PromQL, Grafana dashboard JSON dumps, followed by extensive Prometheus relabel rules to drop any unneeded metrics. The Opentelemetry Collectors were also optimised initially by sharding the scraping across multiple pods to avoid throughput bottlenecks and later by implementing target allocator with Prometheus Operator-compatible CRDs.
         * IP address optimisation via AWS VPC CNI "Custom Networking" a.k.a. secondary subnets. By implementing secondary CIDR ranges using CGNAT IP address space to each EKS VPC, I increased the limit of running pods from 40,000 to 325,000 pods. Additionally, I sharded the VPC CNI daemonsets so that the warm IP address configuration could be optimised for GPU nodes (which only had 1 running workload for cost optimisation reasons) and also configured all the daemonsets to use host networking - reducing the count of 10 IP addresses required per node to just 2.
-        * Bringing down the deployment lead time from multi-day to 1 hour. With so many optimisations needed, the time taken by existing change process requiring PRs to over 10 repositories became the main bottleneck (not to mention the amount of code drift). To remediate this, I took the scattered EKS Terraform code and consolidated each separate root module in to a single root module using Terraform Workspaces. I also implemented a single CI/CD pipeline with Python system tests and approval stages for production. After, changes became a single PR required and all drift between clusters was remediated as a nice side-effect.
+        * Bringing down the deployment lead time from multi-day to 1 hour. With so many optimisations needed, the time taken by existing change process requiring PRs to over 10 repositories became the main bottleneck (not to mention the amount of code drift). To remediate this, I took the scattered EKS Terraform code and consolidated each separate root module in to a single root module using Terraform Workspaces. This was done without any downtime or loss of code change history. I also implemented a single CI/CD pipeline with Python system tests and approval stages for production. After, changes became a single PR required and all drift between clusters was remediated as a nice side-effect.
         * The creation of 20+ (actively in-use) dashboards for the various components in the EKS platform, as well as a library of alerts (also currently in-use).
         * Optimising each of the components in the cluster to reduce control plane load. For example, configuring Fluentbit to query the local kubelet for pod metadata instead of the control plane, or configuring Opentelemetry Collector to scrape components directly instead of being proxied through the control plane.
 
