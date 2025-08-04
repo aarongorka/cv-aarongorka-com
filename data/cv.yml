@@ -22,7 +22,7 @@ work:
   - startDate: Feb 2024
     endDate: August 2025
     name: Nearmap
-    position: DevOps Lead
+    position: Principal DevOps Engineer
     summary: |
       Acting team lead/principal for the core platform team.
 
@@ -30,7 +30,7 @@ work:
 
       #### EKS cluster scaling
 
-      When I started at Nearmap, they were facing issues with their 2,500 node EKS cluster. Because of my experience with EKS and observability, I was brought in to resolve these issues.
+      I was brought in to assist Nearmap with some issues they were having scaling their EKS cluster beyond 3,000 nodes.
 
       After optimisation, we could run at least **9,000 GPU nodes**. A few of the (many) optimisations I put in:
 
@@ -63,13 +63,43 @@ work:
     name: CMD Solutions (Mantel Group)
     position: Lead Consultant
     summary: |
-      Lead consultant on client engagements. Notable projects include:
+      CMD Solutions is an AWS partner that provides consulting services. While at CMD, I acted as a lead consultant on client engagements over a ~6 year period. The full list of clients I worked with is too numerous to list here, but some of the projects I'm most proud of are:
 
       #### Kasada
-        * Enabling "web-scale" for a rapidly expanding SaaS organisation
-        * Designed and delivered a logging platform with Fluentd on ECS Fargate and Elastic Cloud
-        * Uplifting SDLC from multi-month to <1d release cycle
-        * Designing and implementing Kasada's Kubernetes platform: see the [case study](https://www.cmdsolutions.com.au/case-studies/kasada-modernizes-for-faster-velocity-and-scaling-on-aws/) and [article from Amazon](https://aws.amazon.com/solutions/case-studies/kasada/)
+
+      [Kasada](https://www.kasada.io/) is a bot mitigation platform that protects a large number of household brand names in Australia and globally (REA, Crocs, Sportsbet, Hyatt, Officeworks and more). The technology stack used included Pulumi, Buildkite, EC2 and EKS.
+
+      ##### CI/CD
+
+      My biggest contribution to Kasada was uplifting their software development lifecycle for their core application from a multi-month release cycle to under a day (commit to production). While it was not the main directive we were brought in for, I proposed it as something that I felt the business could benefit from.
+
+      Implementing this started with interviewing users to understand the reasons the current system existed in the way it did and what the perceived pain points were. Consulting with the product owner, I came up with a SDLC architecture using trunk-based development with short-lived feature branches with progressive rollouts to environments and customers. After this was approved, I worked on preparing the application for automated deployments. This included some foundational work in preparing Buildkite runners and cross-account capabilities.
+
+      Once the technology was in the right state, I worked with the product owner to gradually move all customers to a recent version, and cut them over to the new deployment pipeline - without interrupting any ongoing development work. This took months, but as we added improvements and proved the benefits of releasing continuously, we gradually built trust both internally and externally.
+
+      The ability to release frequently ended up being crucial in Kasada landing their biggest customer to date.
+
+      ##### Scale
+
+      Kasada scaled rapidly in the two years I worked there. Some of the more interesting problems we faced:
+
+        * Hitting the 2,000 target limit on an ALB's Target Group
+        * EC2 instance cost effectiveness by migrating to spot arm64 instances
+        * Mitigating the limitations of a single-threaded application on multi-core instances
+        * Improving scaling to cope with massively spikey traffic patterns
+        * Scaling out a Prometheus-based observability system to cope with thousands of servers while maintaining a 15 second scrape interval by leveraging [recording rules](https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/) and multi-tier [federation](https://prometheus.io/docs/prometheus/latest/federation/).
+
+      ##### Log centralisation with Elastic Cloud
+
+      One of the pain points Kasada faced was that production logs were delivered to S3, and for engineers to debug, they needed to download them from S3 and locally parse them with CLI tools. This was time-consuming and lacked any collaborative functionality.
+
+      To combat this, I designed and implemented a logging aggregation platform using Elastic Cloud to host and visualise logs, and [Fluentbit/Fluentd](https://aarongorka.com/blog/why-we-chose-fluentd-over-fluent-bit/) to parse and ship logs. By completion of the engagement, the Elastic Cloud cluster was storing over 20TiB of logs.
+
+      ##### EKS microservices platform
+
+      Finally, the main part of work we were brought in to do: designing and implementing Kasada's Kubernetes platform: see the [case study](https://www.cmdsolutions.com.au/case-studies/kasada-modernizes-for-faster-velocity-and-scaling-on-aws/) and [article from Amazon](https://aws.amazon.com/solutions/case-studies/kasada/).
+
+      Another notable aspect of this platform was that it was built from the ground-up to support zero manual intervention deployment to production. The core functionalities of the platform were tested after deployment to ensure they remained functional after changes were released: for example, a specific log event was emitted and then queried from the central logging platfrom to ensure that we hadn't broken log shipping. This was all performed automatically.
 
       #### Vodafone Hutchison Australia (TPG)
         * AWS architect for https://www.vodafone.com.au website refresh
