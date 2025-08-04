@@ -95,18 +95,32 @@ work:
 
       To combat this, I designed and implemented a logging aggregation platform using Elastic Cloud to host and visualise logs, and [Fluentbit/Fluentd](https://aarongorka.com/blog/why-we-chose-fluentd-over-fluent-bit/) to parse and ship logs. By completion of the engagement, the Elastic Cloud cluster was storing over 20TiB of logs.
 
+      ##### SOC2 and PCI DSS
+
+      To provide services to companies with strict security requirements, Kasada needed to be SOC2 and PCI DSS certified. I worked to ensure that any requirements on the platform side were met.
+
       ##### EKS microservices platform
 
       Finally, the main part of work we were brought in to do: designing and implementing Kasada's Kubernetes platform: see the [case study](https://www.cmdsolutions.com.au/case-studies/kasada-modernizes-for-faster-velocity-and-scaling-on-aws/) and [article from Amazon](https://aws.amazon.com/solutions/case-studies/kasada/).
 
-      Another notable aspect of this platform was that it was built from the ground-up to support zero manual intervention deployment to production. The core functionalities of the platform were tested after deployment to ensure they remained functional after changes were released: for example, a specific log event was emitted and then queried from the central logging platfrom to ensure that we hadn't broken log shipping. This was all performed automatically.
+      Another notable aspect of this platform was that it was built from the ground-up to deploy to production with zero manual intervention after a pull request was approved and merged. The core functionalities of the platform were tested after deployment to ensure they remained functional after changes were released: for example, a specific log event was emitted and then queried from the central logging platfrom to ensure that we hadn't broken log shipping. This was all performed automatically.
 
       #### Vodafone Hutchison Australia (TPG)
-        * AWS architect for https://www.vodafone.com.au website refresh
-        * Serverless (Next.js) and EC2 Java applications
-        * Upskilling team in cloud-native and Python best practices
+
+      At Vodafone I worked as an AWS Architect on the www.vodafone.com.au website refresh.
+
+      Technologies I worked with include a polarising mix of modern Serverless applications (Next.js) and traditional EC2-based Java applications.
+
+      In this role, I was involved in:
+
+        * Participating in architecture workshops
+        * Advising/coordinating teams on all aspects of cloud infrastructure
+        * Upskilling the infrastructure team in cloud-native and Python best practices
+        * Writing out foundational code examples/templates
+        * Doing whatever needed to be done to get the project across the line
 
       #### Zip Money
+
         * EKS platform design & build for the new [Amazon Australia partnership](https://www.reuters.com/article/zip-co-deal-amazoncom/amazon-adds-zip-cos-buy-now-pay-later-platform-to-its-australia-website-idUKL3N27M5AZ)
         * CI/CD processes, implementation and culture
         * [Developer skill uplift](https://slides.aarongorka.com/performance-testing-with-taurus/)
