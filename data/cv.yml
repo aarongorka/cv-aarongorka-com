@@ -19,6 +19,14 @@ skills:
   - name: "Soft skills"
     keywords: ["Consulting", "Delivery", "Project management"]
 work:
+  - startDate: November 2025
+    endDate: Present
+    name: Commonwealth Bank of Australia
+    position: Senior Platform Engineer
+    summary: |
+      Leading in the uplift of observability in an AI (LLM) application.
+
+      This includes planning for the data flow of Opentelemetry metrics and traces, standing up an Opentelemetry Collector and integrating with existing observability platforms.
   - startDate: Feb 2024
     endDate: August 2025
     name: Nearmap
