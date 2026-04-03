@@ -1,25 +1,42 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/resumic/schema/refs/heads/master/schema.json
+
+meta:
+  version: 0.0.1
+
 personal:
   name: "Aaron Gorka"
   url: https://aarongorka.com
   summary: "Aaron is a specialist in cloud-native, CI/CD and DevOps transformation. He is experienced in solutions architecture and consulting for cloud projects. Aaron is self-driven and highly motivated."
   profiles:
     - url: https://github.com/aarongorka
+      username: aarongorka
+      network: github
     - url: https://linkedin.com/in/aarongorka
+      username: aarongorka
+      network: linkedin
+core:
+  workArea: Sydney
 skills:
   - name: Cloud
     keywords: ["AWS", "CloudFormation", "Terraform", "CDK", "Pulumi"]
+    proficiency: expert
   - name: Continous Delivery
     keywords: ["Github Actions", "Buildkite", "Gitlab", "Codefresh", "CircleCI"]
+    proficiency: expert
   - name: Docker & Serverless
     keywords: ["Kubernetes", "Docker", "EKS", "ECS", "Fargate", "Lambda"]
+    proficiency: expert
   - name: "Development"
     keywords: ["Python", "Typescript (Javascript, Nodejs)", "Bash", "Testing"]
+    proficiency: expert
   - name: "Linux"
     keywords: ["Networking", "Security", "System administration", "Automation"]
+    proficiency: expert
   - name: "Soft skills"
     keywords: ["Consulting", "Delivery", "Project management"]
+    proficiency: expert
 work:
-  - startDate: November 2025
+  - startDate: November 2025 # TODO: fix to RFC3339 format dates
     endDate: Present
     name: Commonwealth Bank of Australia
     position: Senior Platform Engineer
@@ -153,15 +170,15 @@ work:
       * Maintenance and reliability engineering for high-traffic websites including https://domain.com.au
       * Designed and built monitoring platform, [highly useful](http://tech.domain.com.au/2017/05/detecting-memory-issues-with-dotnet-core-applications/) for development teams
       * Delivered solution architecture for rewrite of https://www.mydesktop.com.au
-  - startDate: 2015
-    endDate: 2017
+  - startDate: "2015"
+    endDate: "2017"
     name: TAL
     position: System Monitoring Specialist
     summary: |
       * Administrated Linux servers and applications
       * Collaborated with developers, DBAs, application support and infrastructure support to deliver accurate metrics to management
-  - startDate: 2013
-    endDate: 2015
+  - startDate: "2013"
+    endDate: "2015"
     name: KU Children's Services
     position: Level 2/3 Support Technician
     summary: |
@@ -176,26 +193,39 @@ certificate:
   - grantDate: 2019
     name: AWS Certified Cloud Practitioner
     website: Amazon Web Services
-  - grantDate: 2018
+  - grantDate: "2018"
     name: AWS Certified Security - Speciality
     website: Amazon Web Services
-  - grantDate: 2017
+  - grantDate: "2017"
     name: AWS Certified DevOps Engineer - Professional
     website: Amazon Web Services
-  - grantDate: 2017
+  - grantDate: "2017"
     name: AWS Certified Solutions Architect - Professional
     website: Amazon Web Services
-  - grantDate: 2017
+  - grantDate: "2017"
     name: AWS Certified SysOps Administrator - Associate
     website: Amazon Web Services
-  - grantDate: 2017
+  - grantDate: "2017"
     name: AWS Certified Developer - Associate
     website: Amazon Web Services
-  - grantDate: 2016
+  - grantDate: "2016"
     name: AWS Certified Solutions Architect - Associate
     website: Amazon Web Services
-  - grantDate: 2015
+  - grantDate: "2015"
     name: Red Hat Certified System Administrator
     website: Red Hat,Inc.
 interests:
   - name: "In my free time I enjoy going on bicycle rides with my riding club or my friends. Afterwards, I like to tinker with electronics and technology."
+
+languages:
+  - language: English
+    level: native
+
+references: []
+projects: []
+awards: []
+legal: []
+publications: []
+volunteer: []
+education: []
+
