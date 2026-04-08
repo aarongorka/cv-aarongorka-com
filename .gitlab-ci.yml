@@ -1,9 +1,6 @@
-image: aarongorka/musketeers:latest  # Docker client, zeus, docker-compose, etc.
-services:
-  - docker:dind  # sidecar that actually runs the Docker daemon
+# yaml-language-server: $schema=https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json
 
 variables:
-  DOCKER_HOST: "tcp://docker:2375"  # this enables the musketeers image to communicate with the dind container
   DOMAIN_NAME: "cv.aarongorka.com"
   AWS_DEFAULT_REGION: "us-east-1"
   AWS_CLOUDFORMATION_STACK_NAME: "cv-aarongorka-com"
@@ -16,8 +13,8 @@ stages:
 
 build:
   stage: build
-  script:
-    - zeus build
+  image: registry.gitlab.com/pages/hugo
+  script: hugo --cleanDestinationDir
   variables:
     GIT_SUBMODULE_STRATEGY: recursive
   artifacts:
@@ -27,27 +24,33 @@ build:
 
 deploy:
   stage: deploy
-  environment: 
+  image:
+    name: amaysim/stacker
+    entrypoint: ["/bin/sh", "-c"]
+  environment:
     name: production
-  script:
-    - zeus deploy
+  script: stacker build stacker.yml --tail --recreate-failed
   only:
     - master
 
 sync:
   stage: sync
-  environment: 
+  image:
+    name: amazon/aws-cli
+    entrypoint: ["/bin/sh", "-c"]
+  environment:
     name: production
-  script:
-    - zeus syncToS3
+  script: aws s3 sync --no-progress --delete --cache-control 'max-age=3155695200' public/ "s3://${DOMAIN_NAME}/"
   only:
     - master
 
 invalidate:
   stage: invalidate
-  environment: 
+  image:
+    name: amazon/aws-cli
+    entrypoint: ["/bin/sh", "-c"]
+  environment:
     name: production
-  script:
-    - zeus cacheInvalidation
+  script: aws cloudfront create-invalidation --distribution-id="$(aws cloudformation --region us-east-1 describe-stacks --stack-name "${AWS_CLOUDFORMATION_STACK_NAME}" --query 'Stacks[0].Outputs[?OutputKey==`CloudFrontDistributionId`].OutputValue' --output=text)" --paths "/*"
   only:
     - master
