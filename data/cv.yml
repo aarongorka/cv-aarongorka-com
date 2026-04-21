@@ -20,11 +20,11 @@ skills:
   - name: Cloud
     keywords: ["AWS", "CloudFormation", "Terraform", "CDK", "Pulumi"]
     proficiency: expert
-  - name: Continous Delivery
-    keywords: ["Github Actions", "Buildkite", "Gitlab", "Codefresh", "CircleCI"]
-    proficiency: expert
   - name: Docker & Serverless
     keywords: ["Kubernetes", "Docker", "EKS", "ECS", "Fargate", "Lambda"]
+    proficiency: expert
+  - name: Continous Delivery
+    keywords: ["Github Actions", "Buildkite", "Gitlab", "ArgoCD", "GitOps"]
     proficiency: expert
   - name: "Development"
     keywords: ["Python", "Typescript (Javascript, Nodejs)", "Bash", "Testing"]
@@ -41,36 +41,41 @@ work:
     name: Commonwealth Bank of Australia
     position: Senior Platform Engineer
     summary: |
+      **Tech:** AWS ECS, OpenTelemetry, GitHub Actions, Python, Langfuse, HoneyHive, Semantic Kernel
+
       Leading in the uplift of observability in an agentic (AI, LLM) application.
 
-      **Tech:** AWS ECS, OpenTelemetry, GitHub Actions, Python, Langfuse, HoneyHive, Semantic Kernel
+      - Implementing Opentelemetry instrumentation in Python applications
+      - Uplifting structured logging, including writing new standards
+      - Deploying infrastructure for Opentelemetry Collectors
+      - Creating high-quality, produciton-grade dashboards for on-call support
   - startDate: Feb 2024
     endDate: August 2025
     name: Nearmap
     position: Principal DevOps Engineer
     summary: |
-      **Tech:** AWS (EKS, VPC, IAM), Terraform, Helm, GitHub Actions, Prometheus, Grafana, Loki, OpenTelemetry
+      **Tech:** AWS (EKS, VPC, TGW, IAM), Linux, Terraform, Helm, GitHub Actions, Prometheus, Grafana, Loki, OpenTelemetry
 
       #### EKS Platform Scaling & Optimisation
 
-      Led large-scale optimisation of Kubernetes platform supporting GPU workloads:
-
+      - Provisioned, updated and maintained EKS clusters
+      - Supported engineers onboarding to EKS-based platform
       - Scaled machine learning workloads from 3,000 to **9,000+ GPU nodes**
       - Implemented drastic observability, networking and control plane optimisations
       - Reduced deployment lead time from **multiple days → 1 hour** (Terraform restructure, unified CI/CD pipeline, testing uplift)
 
-      #### Observability & Logging
-
-      - Designed and deployed **Grafana Loki** to replace legacy logging (Graylog)
-      - Built **20+ production dashboards** and alerting standards across platform components
-      - Implemented scalable, multi-tenant observability architecture
-      - Centralised alerting via Opsgenie with integrations across AWS and monitoring stack
-
       #### Platform Engineering & Architecture
 
-      - Re-architected IAM/RBAC into scalable, team-based access model
-      - Led migration from GitLab CI to **GitHub Actions** (self-hosted runners)
-      - Contributed to network modernisation strategy (AWS Transit Gateway)
+      - Championed a redesign/uplift of Terraform code to improve change velocity and reliability (**tens of thousands** of lines of unnecessary code removed)
+      - Designed, planned and implemented **GitHub Actions** to replace GitLab CI (self-hosted runners)
+      - Architecture and planning for network modernisation strategy (AWS Transit Gateway)
+      - IAM/RBAC uplift from adhoc design to scalable, team-based access model
+
+      #### Observability & Logging
+
+      - Architected and deployed **Grafana Loki** to replace legacy logging (Graylog)
+      - Built **20+ high quality dashboards** for platform components and applications
+      - Centralised alerting via Opsgenie, including migrating all engineering teams
 
       #### Leadership & Mentorship
 
@@ -81,28 +86,30 @@ work:
     name: CMD Solutions (Mantel Group)
     position: Lead Consultant
     summary: |
-      Lead Consultant on client engagements.
+      Lead Consultant on client engagements, which are individually listed below.
 
-      #### Kasada – Platform Transformation & Scale
+      #### Kasada
 
       **Tech:** AWS (EKS, EC2, ALB), Pulumi, Buildkite, Elasticsearch, Prometheus/Grafana, Node.js (TypeScript)
 
+      ##### Kubernetes Platform Engineering
+
+      - Designed and built **EKS-based microservices platform**
+      - Worked with engineers to migrate core application to EKS
+      - Continuous deployment of platform changes via Buildkite, including post-deployment system tests
+
       ##### Developer Productivity & CI/CD Transformation
 
-      Led end-to-end redesign of the SDLC to enable high-velocity, low-risk deployments:
+      Led end-to-end redesign of core application's SDLC to enable high-velocity, low-risk deployments:
 
       - Reduced release cycle from **months → <1 day (commit to production)**
-      - Designed and implemented **trunk-based development** with progressive delivery across environments and customers
-      - Built fully automated, zero-touch deployment pipelines using Buildkite
+      - Migrated to **trunk-based development** with progressive delivery across environments and customers
       - Migrated legacy customers to continuous delivery model without disrupting active development
       - Enabled rapid iteration, contributing to acquisition of **largest customer to date**
 
       ##### Distributed Systems Scaling
 
-      Solved critical scaling challenges across high-growth infrastructure:
-
-      - Designed solutions for **ALB target group scaling limits (2,000+)**
-      - Mitigated single-threaded application constraints on multi-core systems
+      - Designed solutions for scaling bottlenecks e.g. ALB target group scaling limits (2,000+)
       - Optimised platform to handle **highly spiky, burst-heavy traffic patterns**
       - Scaled Prometheus observability to **thousands of nodes** using recording rules and federated architecture
 
@@ -110,19 +117,9 @@ work:
 
       Designed and implemented centralised, production-grade logging and monitoring:
 
-      - Implemented **Elastic Cloud–backed logging platform** to improve developer experience
+      - Implemented **Elastic Cloud–backed logging platform** to improve developer experience (**20+ TiB indexed logs**)
       - Built ingestion pipelines using Fluentd/Fluent Bit for structured, searchable logs
-      - Enabled real-time debugging and cross-team visibility at scale (**20+ TiB indexed logs**)
-      - Established observability patterns adopted across engineering teams
-
-      ##### Kubernetes Platform Engineering
-
-      Architected and delivered a production-grade EKS platform:
-
-      - Designed microservices platform with **fully automated deployments (no manual intervention)**
-      - Implemented post-deployment validation via automated system-level tests
-      - Integrated observability and reliability checks directly into deployment workflows
-      - Delivered platform enabling independent team scaling and faster feature delivery
+      - Established observability patterns across engineering teams
 
       ##### Security & Compliance Enablement
 
@@ -141,10 +138,9 @@ work:
 
       **Tech:** AWS (EC2, ASG, Serverless, CloudFront, Lambda@Edge)
 
-        * Advising/coordinating teams on all aspects of cloud infrastructure
+        * Designing and advising on AWS architecture
         * Upskilling the infrastructure team in cloud-native and Python best practices
-        * Writing out foundational code examples/templates
-        * Doing whatever needed to be done to get the project across the line
+        * Writing out foundational Terraform and python code examples/templates
 
       #### Zip Money
 
@@ -160,6 +156,7 @@ work:
 
       Supporting a team deliver a greenfields service on to EKS.
 
+        * Provisioned new EKS clusters
         * Helm charts, Terraform and CI/CD for new microservices
         * Advising on all things DevOps-related
 
@@ -168,6 +165,7 @@ work:
       Lead consultant delivering a Kubernetes platform on AWS and facilitiating migration of apps.
 
         * Creating AWS infrastructure for Kubernetes cluster using KOPS
+        * Migrating EC2 and on-prem applications to Kubernetes
         * Working with security and compliance teams to introduce Kubernetes to the organisation
         * Creating Docker images for applications and working with engineering teams to migrate applications
 
@@ -177,6 +175,7 @@ work:
     name: amaysim
     position: Senior DevOps Engineer
     summary: |
+        * Maintaining and provisioning AWS infrastructure
         * Championed DevOps culture in development teams
         * Migrated applications from Rancher to [AWS ECS](https://aarongorka.com/blog/ecs-autoscaling-tips/)
         * Modernised legacy development practices: [pipeline-based CI/CD workflows](https://amaysim.engineering/auto-scaling-build-agents-for-gocdtags-a10f12d5b77c), trunk-based development, immutable artifacts
